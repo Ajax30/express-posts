@@ -1,0 +1,41 @@
+.logo {
+  width: 30px;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .nav-item {
+    width: auto;
+  }
+}
+
+.post-grid {
+  margin-top: 1rem;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.post-container {
+  flex: 1;
+  padding: 15px;
+  background: #fcfcfc;
+  border: 1px solid #eaeaea;
+}
+
+.post-title {
+  font-size: 18px;
+}
+
+.short-desc {
+  text-align: justify;
+}
