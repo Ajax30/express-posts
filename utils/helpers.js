@@ -6,7 +6,7 @@ String.prototype.toTitleCase = function() {
     return x.join(' ');
   }
 
-  String.prototype.capitalizeSentence= function() {
+  String.prototype.capitalizeSentence = function() {
     let wordsArray = this.toLowerCase().split(' ')
     let capsArray = []
 

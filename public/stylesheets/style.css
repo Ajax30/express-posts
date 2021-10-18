@@ -39,3 +39,23 @@
 .short-desc {
   text-align: justify;
 }
+
+/* User Info */
+
+.table.user-info {
+  margin-bottom: 0;
+}
+
+.table.user-info>tbody>tr:first-child>td {
+  border-top: none !important;
+}
+
+.table.user-info td {
+  padding: 6px !important;
+}
+
+.table.user-info tr td:first-child {
+  font-weight: 500;
+  width: 32% !important;
+}
+

@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
       <!-- Brand -->
-      <a class="navbar-brand p-0" href="#">
+      <a class="navbar-brand p-0" href="/">
         <img src="/images/logo.png" alt="" class="logo">
       </a>
       <button class="navbar-toggler d-md-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +22,7 @@
       <div class="navbar-nav navbar-expand-md  w-100">
         <ul class="navbar-nav navbar-expand-md collapse navbar-collapse" id="navbarSupportedContent">
           <li class="nav-item">
-            <a class="nav-link" href="#"><%= title %></a>
+            <a class="nav-link" href="/"><%= title %></a>
           </li>
           <% if (users) {%>
           <!-- Dropdown -->
@@ -43,6 +43,46 @@
     </nav>
   
     <%- body; %>
+
+  <% if (currentUser !== null) {%>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle"><%= currentUser.name %></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="table user-info">
+              <tr>
+                <td>Lives in</td>
+                <td><%= currentUser.address.city %></td>
+              </tr>
+              <tr>
+                <td>Address</td>
+                <td><%= currentUser.address.street %>, <%= currentUser.address.suite %></td>
+              </tr>
+              <tr>
+                <td>Zipcode</td>
+                <td><%= currentUser.address.zipcode %></td>
+              </tr>
+              <tr>
+                <td>Email</td>
+                <td>
+                  <a href="mailto:<%= currentUser.email.toLowerCase() %>"><%= currentUser.email.toLowerCase() %></a>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% } %>
   
     <script src="/javascripts/jquery.min.js"></script>
     <script src="/javascripts/popper.min.js"></script>

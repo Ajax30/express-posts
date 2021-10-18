@@ -15,9 +15,10 @@ exports.getHomepageData = async (req, res, next) => {
   res.render('index',
   {
     layout: 'layout',
-    title: 'Express',
+    title: 'Express Magazine',
     pageTitle: 'All posts',
     users: users,
+    currentUser: null,
     posts: posts,
 
    }
@@ -42,10 +43,10 @@ exports.getPostsByUser = async (req, res, next) => {
   res.render('index',
   {
     layout: 'layout',
-    title: 'Express',
+    title: 'Express Magazine',
     users: users,
     posts: posts,
     currentUser: currentUser,
-    pageTitle: `All posts by ${currentUser.name}`,
+    pageTitle: `Posts by ${currentUser.name}`,
   });
 };
