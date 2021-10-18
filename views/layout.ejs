@@ -29,6 +29,7 @@
           <li class="nav-item dropdown nav-item">
             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Authors</a>
             <div class="dropdown-menu">
+              <a class="dropdown-item" href="/">All authors</a>
               <% users.forEach(function(user) { %>
               <a class="dropdown-item" href="/users/<%= user.id %>/posts">
                 <%= user.name %>
