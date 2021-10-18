@@ -6,6 +6,6 @@ const router = express.Router();
 router.get('/', indexController.getHomepageData);
 
 // Get Posts By User
-router.get('/:uid', indexController.getPostsByUser);
+router.get('/users/:uid/posts/', indexController.getPostsByUser);
 
 module.exports = router;

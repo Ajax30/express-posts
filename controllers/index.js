@@ -47,7 +47,5 @@ exports.getPostsByUser = async (req, res, next) => {
     posts: posts,
     currentUser: currentUser,
     pageTitle: `All posts by ${currentUser.name}`,
-
-   }
-  );
+  });
 };
