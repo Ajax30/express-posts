@@ -7,12 +7,12 @@ String.prototype.toTitleCase = function() {
   }
 
   String.prototype.capitalizeSentence = function() {
-    let wordsArray = this.toLowerCase().split(' ')
-    let capsArray = []
+    let wordsArray = this.toLowerCase().split(' ');
+    let capsArray = [];
 
     wordsArray.forEach(word => {
-        capsArray.push(word[0].toUpperCase() + word.slice(1))
+        capsArray.push(word[0].toUpperCase() + word.slice(1));
     });
 
-    return capsArray.join(' ')
+    return capsArray.join(' ');
 }

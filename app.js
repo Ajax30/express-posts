@@ -1,14 +1,12 @@
-var createError = require('http-errors');
-var express = require('express');
-var axios = require('axios');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var expressLayouts = require('express-ejs-layouts');
-var logger = require('morgan');
-
-var indexRouter = require('./routes/index');
-
-var app = express();
+const createError = require('http-errors');
+const express = require('express');
+const axios = require('axios');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const expressLayouts = require('express-ejs-layouts');
+const logger = require('morgan');
+const indexRouter = require('./routes/index');
+const app = express();
 
 global.base_url = 'https://jsonplaceholder.typicode.com';
 global.title = 'Express Magazine';
