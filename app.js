@@ -12,6 +12,7 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 global.base_url = 'https://jsonplaceholder.typicode.com';
+global.title = 'Express Magazine';
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
